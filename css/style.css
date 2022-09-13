@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP&display=swap');
+
+/* Färger tagna från deras hemsida: https: //www.koket.lu/#/ */
+:root {
+    --clr-background-: #fef7f4;
+    --clr-secondary-: #f3e3de;
+    --clr-text-: #4a4847;
+    --clr-accent-: #df2727;
+    --clr-heading-: #e5605f;
+    --clr-heading2-: #1c1c1c;
+
+    --font-family-heading-: 'Noto Sans JP', sans-serif;
+    --font-family-primary-: 'Noto Serif JP', serif;
+
+    --box-padding-size: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body {
+    font-family: var(--font-family-primary-);
+    color: var(--clr-text-);
+    background-color: var(--clr-background-);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-family-heading-);
+}
+
+header {
+    background-color: var(--clr-secondary-);
+    padding: 1rem 4rem;
+    font-family: var(--font-family-heading-);
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin-bottom: var(--box-padding-size);
+}
+
+header ul {
+    display: flex;
+    align-content: center;
+    gap: 8rem;
+}
+
+header img {
+    width: 3rem;
+}
+
+ul,
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: var(--clr-accent-);
+    background-color: var(--clr-primary-);
+}
+
+a:active {
+    color: var(--clr-accent-);
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: var(--clr-text-);
+    text-decoration: none;
+}
+
+li #active-site:first-child {
+    color: var(--clr-heading2-);
+    text-decoration: underline;
+}
+
+li #active-site:first-child:hover {
+    color: var(--clr-accent-);
+}
+
+footer {
+    background-color: var(--clr-secondary-);
+    display: flex;
+    justify-content: space-around;
+    padding: var(--box-padding-size);
+}
+
+footer section {
+    margin: 1rem 0rem;
+}
+
+tr {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 4rem;
+    margin: 1rem 0rem;
+}
+
+.address>p {
+    margin: 1rem 0rem;
+}
+
+.platforms>li {
+    margin: 1rem 0rem;
+}
+
+.footer-list ul a img {
+    transform-origin: top left;
+    transform: scale(1.33);
+    /*Använt https://codepen.io/sosuke/pen/Pjoqqp för att räkna ut "--clr-text"*/
+    filter: invert(21%) sepia(5%) saturate(302%) hue-rotate(336deg) brightness(97%) contrast(87%);
+}
+
+.footer-list ul a img:hover {
+    filter: invert(15%) sepia(98%) saturate(1980%) hue-rotate(343deg) brightness(141%) contrast(102%);
+}
+
+/*index.html*/
+.home-section {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 4rem 20rem 4rem;
+}
+
+.home-section section {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+/*menu.html*/
+.menu-section {
+    display: grid;
+    grid-template-columns: 20% 1fr 4% 1fr 20%;
+    grid-template-rows: 4rem 32rem auto 4rem;
+
+}
+
+.chinese,
+.price {
+    font-size: 1.66rem;
+    color: var(--clr-heading-);
+}
+
+.menu-section h1,
+.menu-section h2 {
+    color: var(--clr-accent-);
+}
+
+.signature-category {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.family-category {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.lunch-category {
+    grid-column: 4/5;
+    grid-row: 1/4;
+}
+
+.menu-section h1 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
+
+.lunch-menu-category-info{
+    margin-top: 2rem;
+}
+
+.lunch-menu-category-info p{
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.lunch-menu-category-info p a {
+    color: var(--clr-heading-);
+}
+
+.lunch-menu-category:first-child {
+    margin-top: 2rem;
+}
+
+.lunch-menu-category {
+    margin-top: 4rem;
+}
+
+.menu-item {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+
+/*contact.html*/
+.contact-section {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 4rem 20rem 4rem;
+}
