@@ -14,23 +14,44 @@
         <img src="../images/lu_logo.png" alt="LU logo">
         <nav class="nav-list">
             <ul>
-                <li><a href="../index.html">Hem</a></li>
+                <li><a href="../index.html">Om oss</a></li>
                 <li><a href="./menu.html">Menu</a></li>
-                <li><a href="./contact.html" id="active-site">Kontakt</a></li>
+                <li><a href="./contact.html" id="active-site">Boka bord</a></li>
             </ul>
         </nav>
     </header>
 
-    <article>
-
-    </article>
+    <section class="contact-section">
+        <h1>Boka bord</h1>
+        <form>
+            <section class="inputs">
+                <label for="name">Namn:</label>
+                <input type="text" id="name" placeholder="Namn">
+            </section>
+            <section class="inputs">
+                <label for="date">Datum:</label>
+                <input type="date" id="date" placeholder="Datum">
+            </section>
+            <section class="inputs">
+                <label for="time">Tid:</label>
+                <input type="time" id="time" placeholder="Datum">
+            </section>
+            <section class="inputs">
+                <label for="comment">Övriga önskemål:</label>
+                <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+            </section>
+            <input type="submit" id="submit" value="Skicka">
+        </form>
+    </section>
 
     <footer>
         <section class="address">
             <h3>Hitta till oss</h3>
             <p>Davidshallstorg 3</p>
             <p>211 45 Malmö</p>
+            <br>
             <p>040 - 31 98 98</p>
+            <p>hej@koket.lu</p>
         </section>
         <section class="open-hours">
             <h3>Öppettider</h3>

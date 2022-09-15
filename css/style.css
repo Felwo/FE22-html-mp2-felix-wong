@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP&display=swap');
 
-/* Färger tagna från deras hemsida: https: //www.koket.lu/#/ */
+/* Färger tagna från deras hemsida: https: //www.koket.lu/#/ och bilder från deras instagram */
 :root {
     --clr-background-: #fef7f4;
     --clr-secondary-: #f3e3de;
@@ -40,6 +40,14 @@ h3 {
     font-family: var(--font-family-heading-);
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
 header {
     background-color: var(--clr-secondary-);
     padding: 1rem 4rem;
@@ -49,7 +57,6 @@ header {
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    margin-bottom: var(--box-padding-size);
 }
 
 header ul {
@@ -114,6 +121,7 @@ tr {
 
 .address>p {
     margin: 1rem 0rem;
+    font-size: 1rem;
 }
 
 .platforms>li {
@@ -135,12 +143,25 @@ tr {
 .home-section {
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
-    grid-template-rows: 4rem 20rem 4rem;
+    grid-template-rows: 4rem auto 20vh;
+    background-image: url('../images/cover.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .home-section section {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
+    padding: 3rem;
+}
+
+.home-section section h1 {
+    color: var(--clr-accent-);
+}
+
+.home-section section p {
+    text-shadow: -1px 0 var(--clr-background-), 0 1px var(--clr-background-), 1px 0 var(--clr-background-), 0 -1px var(--clr-background-);
 }
 
 /*menu.html*/
@@ -179,16 +200,14 @@ tr {
 
 .menu-section h1 {
     margin-top: 2rem;
-    font-size: 2.5rem;
 }
 
-.lunch-menu-category-info{
+.lunch-menu-category-info {
     margin-top: 2rem;
 }
 
-.lunch-menu-category-info p{
-    margin-top: 1.5rem;
-    font-size: 1.25rem;
+.lunch-menu-category-info p {
+    margin-top: var(--box-padding-size);
 }
 
 .lunch-menu-category-info p a {
@@ -204,13 +223,60 @@ tr {
 }
 
 .menu-item {
-    margin-top: 1.5rem;
-    font-size: 1.25rem;
+    margin-top: var(--box-padding-size);
 }
 
 /*contact.html*/
 .contact-section {
+    margin-top: var(--box-padding-size);
     display: grid;
-    grid-template-columns: 2fr 3fr 2fr;
-    grid-template-rows: 4rem 20rem 4rem;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: 4rem 24rem 2rem;
 }
+
+.contact-section h1 {
+    grid-column: 2 / span 3;
+}
+
+.contact-section form {
+    grid-column: 2 /span 2;
+    grid-row: 2 /span 1;
+    /* display: table; */
+    border-spacing: 5px;
+}
+
+.contact-section form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4rem auto 4rem;
+}
+
+.inputs:nth-child(4) {
+    grid-column: 1 / span 3;
+    display: grid;
+    grid-template-rows: 2fr 8fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.inputs:nth-child(4) textarea {
+    grid-row: 2/ 3;
+    grid-column: 1/ span 2;
+    resize: none;
+}
+
+.contact-section input {
+    grid-row: 3 /span 1;
+}
+
+/* .contact-section form > section {
+    display: table-row;
+}
+
+label{
+    display: table-cell;
+
+}
+input{
+    vertical-align: bottom;
+    margin-left: 0;
+} */
