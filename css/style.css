@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP&display=swap');
 
-/* Färger tagna från deras hemsida: https: //www.koket.lu/#/ och bilder från deras instagram */
+/* Färger tagna från deras hemsida: https: //www.koket.lu/#/ och bilder från deras instagram 
+
+OBS!
+Contact.html css använder jag subgrid som bara funka på firefox just nu(15 sep 2022) annars kommer utseende ser annorlunda ut.
+https: //developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid#browser_compatibility
+*/
 :root {
     --clr-background-: #fef7f4;
     --clr-secondary-: #f3e3de;
@@ -241,7 +246,6 @@ tr {
 .contact-section form {
     grid-column: 2 /span 2;
     grid-row: 2 /span 1;
-    /* display: table; */
     border-spacing: 5px;
 }
 
@@ -267,16 +271,3 @@ tr {
 .contact-section input {
     grid-row: 3 /span 1;
 }
-
-/* .contact-section form > section {
-    display: table-row;
-}
-
-label{
-    display: table-cell;
-
-}
-input{
-    vertical-align: bottom;
-    margin-left: 0;
-} */
